@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-07T22:55:38.927533" rpa="false" schemaversion="5">
+<suite id="s1" name="Projeto" source="C:\Users\lelet\OneDrive\Documentos\IQS\Projeto Final\projeto">
+<suite id="s1-s1" name="Projeto-Final" source="C:\Users\lelet\OneDrive\Documentos\IQS\Projeto Final\projeto\Projeto-Final">
+<suite id="s1-s1-s1" name="Sistema-Competencias" source="C:\Users\lelet\OneDrive\Documentos\IQS\Projeto Final\projeto\Projeto-Final\sistema-competencias.robot">
+<test id="s1-s1-s1-t1" name="TC003 - Verificar Credenciais Inválidas - Colaborador" line="47">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2024-02-07T22:55:39.606553" elapsed="0.000696"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-07T22:55:39.610241" level="INFO">Opening browser 'chrome' to base url 'http://sistemas.t2mlab.com:3006/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-07T22:55:39.609244" elapsed="3.355959"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-07T22:55:42.966808" elapsed="0.238363"/>
+</kw>
+<kw name="Realizar Login Inválido">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-07T22:55:43.216470" level="INFO">Typing text 'BLCarvalho' into text field 'id:formBasicEmail'.</msg>
+<arg>${LOGIN_PAGE.UsernameInput}</arg>
+<arg>BLCarvalho</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T22:55:43.214146" elapsed="0.262299"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-07T22:55:43.478440" level="INFO">Typing password into text field 'id:formBasicPassword'.</msg>
+<msg time="2024-02-07T22:55:43.565208" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${LOGIN_PAGE.PasswordInput}</arg>
+<arg>senhaerrada</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T22:55:43.476445" elapsed="0.206835"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-07T22:55:43.684887" level="INFO">Clicking element 'css=.botao-default'.</msg>
+<arg>${LOGIN_PAGE.LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T22:55:43.683280" elapsed="0.096356"/>
+</kw>
+<status status="PASS" start="2024-02-07T22:55:43.213148" elapsed="0.566488"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-07T22:55:43.781629" elapsed="2.600124"/>
+</kw>
+<status status="PASS" start="2024-02-07T22:55:39.601288" elapsed="6.781462"/>
+</test>
+<status status="PASS" start="2024-02-07T22:55:39.039857" elapsed="7.345886"/>
+</suite>
+<status status="PASS" start="2024-02-07T22:55:39.031873" elapsed="7.358855"/>
+</suite>
+<status status="PASS" start="2024-02-07T22:55:38.943024" elapsed="7.450697"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Projeto">Projeto</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Projeto-Final">Projeto.Projeto-Final</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Sistema-Competencias">Projeto.Projeto-Final.Sistema-Competencias</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
