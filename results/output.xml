@@ -1,215 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-10T13:39:59.990376" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-10T16:09:10.615067" rpa="false" schemaversion="5">
 <suite id="s1" name="Projeto-Final-Iqs" source="C:\Users\lelet\OneDrive\Documentos\IQS\Projeto Final\projeto-final-iqs">
 <suite id="s1-s1" name="Tests" source="C:\Users\lelet\OneDrive\Documentos\IQS\Projeto Final\projeto-final-iqs\tests">
-<suite id="s1-s1-s1" name="Test Competences" source="C:\Users\lelet\OneDrive\Documentos\IQS\Projeto Final\projeto-final-iqs\tests\test_competences.robot">
-<test id="s1-s1-s1-t1" name="TC012 - Verificar Filtro de Busca" line="54">
+<suite id="s1-s1-s1" name="Test Services" source="C:\Users\lelet\OneDrive\Documentos\IQS\Projeto Final\projeto-final-iqs\tests\test_services.robot">
+<test id="s1-s1-s1-t1" name="TC023 - Cadastrar Serviço - Campos Obrigatórios" line="18">
 <kw name="Open Browser for Navigation" owner="setup_teardown" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:00.387360" level="INFO">Opening browser 'chrome' to base url 'http://sistemas.t2mlab.com:3006/'.</msg>
+<msg time="2024-02-10T16:09:10.987046" level="INFO">Opening browser 'chrome' to base url 'http://sistemas.t2mlab.com:3006/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-10T13:40:00.386356" elapsed="2.497288"/>
+<status status="PASS" start="2024-02-10T16:09:10.986015" elapsed="2.317728"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-10T13:40:02.884641" elapsed="0.149602"/>
+<status status="PASS" start="2024-02-10T16:09:13.305751" elapsed="0.153515"/>
 </kw>
-<status status="PASS" start="2024-02-10T13:40:00.384323" elapsed="2.650917"/>
+<status status="PASS" start="2024-02-10T16:09:10.985015" elapsed="2.474251"/>
 </kw>
 <kw name="Realizar Login Válido Gestor" owner="login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:03.038231" level="INFO">Typing text 'Alan' into text field 'id:formBasicEmail'.</msg>
+<msg time="2024-02-10T16:09:13.464252" level="INFO">Typing text 'Alan' into text field 'id:formBasicEmail'.</msg>
 <arg>${LOGIN_PAGE.UsernameInput}</arg>
 <arg>Alan</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:03.037234" elapsed="0.212432"/>
+<status status="PASS" start="2024-02-10T16:09:13.462257" elapsed="0.187510"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:03.252658" level="INFO">Typing password into text field 'id:formBasicPassword'.</msg>
-<msg time="2024-02-10T13:40:03.302526" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-02-10T16:09:13.651750" level="INFO">Typing password into text field 'id:formBasicPassword'.</msg>
+<msg time="2024-02-10T16:09:13.691644" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LOGIN_PAGE.PasswordInput}</arg>
 <arg>123</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:03.250664" elapsed="0.130650"/>
+<status status="PASS" start="2024-02-10T16:09:13.650753" elapsed="0.093749"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:03.383309" level="INFO">Clicking element 'css=.botao-default'.</msg>
+<msg time="2024-02-10T16:09:13.745499" level="INFO">Clicking element 'css=.botao-default'.</msg>
 <arg>${LOGIN_PAGE.LoginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:03.381314" elapsed="0.103724"/>
+<status status="PASS" start="2024-02-10T16:09:13.744502" elapsed="0.056849"/>
 </kw>
-<status status="PASS" start="2024-02-10T13:40:03.036241" elapsed="0.449793"/>
+<status status="PASS" start="2024-02-10T16:09:13.460262" elapsed="0.342086"/>
 </kw>
 <kw name="Selecionar Projeto" owner="login">
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${SELECT_PROJECT}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-02-10T13:40:03.488029" elapsed="0.544545"/>
+<status status="PASS" start="2024-02-10T16:09:13.803345" elapsed="0.472752"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:04.033573" level="INFO">Clicking element 'css=.col-lg-3:nth-child(3) .MuiCardMedia-root'.</msg>
+<msg time="2024-02-10T16:09:14.278090" level="INFO">Clicking element 'css=.col-lg-3:nth-child(3) .MuiCardMedia-root'.</msg>
 <arg>${SELECT_PROJECT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:04.032574" elapsed="0.099733"/>
+<status status="PASS" start="2024-02-10T16:09:14.277093" elapsed="0.086768"/>
 </kw>
-<status status="PASS" start="2024-02-10T13:40:03.487033" elapsed="0.645274"/>
+<status status="PASS" start="2024-02-10T16:09:13.802348" elapsed="0.561513"/>
 </kw>
-<kw name="Listar Competências" owner="competences">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SELECT_BUTTON}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-10T13:40:04.134302" elapsed="0.039894"/>
-</kw>
+<kw name="Clicar em serviço" owner="services">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:04.175193" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/a/div/button'.</msg>
-<arg>${SELECT_BUTTON}</arg>
+<msg time="2024-02-10T16:09:14.365856" level="INFO">Clicking element 'xpath=//button[.='Serviço']'.</msg>
+<arg>${SELECT_SERVICE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:04.175193" elapsed="0.112699"/>
+<status status="PASS" start="2024-02-10T16:09:14.365856" elapsed="0.117730"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SEARCH_COMPETENCE.SearchButton}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-10T13:40:04.287892" elapsed="0.034907"/>
+<status status="PASS" start="2024-02-10T16:09:14.364858" elapsed="0.118728"/>
 </kw>
+<kw name="Clicar em cadastrar serviço" owner="services">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:04.323795" level="INFO">Clicking element 'css=[href='/buscarComp'] .botao-default'.</msg>
-<arg>${SEARCH_COMPETENCE.SearchButton}</arg>
+<msg time="2024-02-10T16:09:14.486578" level="INFO">Clicking element 'xpath=//button[.='Cadastrar Serviço']'.</msg>
+<arg>${CAD_SERVICE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:04.322799" elapsed="0.087765"/>
+<status status="PASS" start="2024-02-10T16:09:14.485582" elapsed="0.081780"/>
 </kw>
-<doc>Testa se na lista são exibidas todas as competências cadastradas.</doc>
-<status status="PASS" start="2024-02-10T13:40:04.133305" elapsed="0.278256"/>
+<status status="PASS" start="2024-02-10T16:09:14.484583" elapsed="0.082779"/>
 </kw>
-<kw name="Filtrar Busca de Competência" owner="competences">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${FILTER_COMPETENCE.LastPage}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-10T13:40:04.416549" elapsed="0.019946"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${FILTER_COMPETENCE.LastPage}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-02-10T13:40:04.436495" elapsed="0.285582"/>
-</kw>
-<kw name="Click Element At Coordinates" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:04.724071" level="INFO">Clicking element 'css:.area-paginacao &gt; div:nth-of-type(5) &gt; [stroke='currentColor']' at coordinates x=10, y=10.</msg>
-<arg>${FILTER_COMPETENCE.LastPage}</arg>
-<arg>10</arg>
-<arg>10</arg>
-<doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
-<status status="PASS" start="2024-02-10T13:40:04.722077" elapsed="0.548784"/>
-</kw>
-<kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:05.288813" level="INFO">${item_count} = 4</msg>
-<var>${item_count}</var>
-<arg>${FILTER_COMPETENCE.TableLocator}//tbody/tr</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:05.270861" elapsed="0.018949"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:05.321723" level="INFO">${last_item} = lR5kTaX3RL</msg>
-<var>${last_item}</var>
-<arg>xpath=(//table[@class='table table-striped table-hover']//tbody/tr[${item_count}])/td[1]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:05.289810" elapsed="0.032911"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:05.323718" level="INFO">Clicking element 'css:.area-paginacao &gt; div:nth-of-type(1) &gt; [stroke='currentColor']'.</msg>
-<arg>${FILTER_COMPETENCE.FirstPage}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:05.322721" elapsed="0.060838"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:05.385555" level="INFO">Clicking element 'xpath=//input[@class='form-control']'.</msg>
-<arg>${FILTER_COMPETENCE.FilterInput}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:05.383559" elapsed="0.070811"/>
+<kw name="Preencher campos nome &quot;Other test&quot; e descrição &quot;&quot;" owner="services" source_name="Preencher campos nome &quot;${NOME}&quot; e descrição &quot;${DESCRICAO}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-10T16:09:14.570355" level="INFO">Typing text 'Other test' into text field 'id=formBasicEmail'.</msg>
+<arg>${FORM_INPUT}</arg>
+<arg>${NOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T16:09:14.569358" elapsed="0.178521"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:05.456365" level="INFO">Typing text 'lR5kTaX3RL' into text field 'xpath=//input[@class='form-control']'.</msg>
-<arg>${FILTER_COMPETENCE.FilterInput}</arg>
-<arg>${last_item}</arg>
+<msg time="2024-02-10T16:09:14.748878" level="INFO">Typing text '' into text field 'xpath=//textarea[@id='formBasicEmail']'.</msg>
+<arg>${FORM_INPUT2}</arg>
+<arg>${DESCRICAO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-10T13:40:05.455367" elapsed="0.106715"/>
+<status status="PASS" start="2024-02-10T16:09:14.747879" elapsed="0.097739"/>
 </kw>
-<doc>Testa se o filtro de busca funciona corretamente.</doc>
-<status status="PASS" start="2024-02-10T13:40:04.415552" elapsed="1.146530"/>
+<status status="PASS" start="2024-02-10T16:09:14.568359" elapsed="0.278257"/>
 </kw>
-<kw name="Verificar se há resultados" owner="collaborators">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Clicar no botão confirmar" owner="services">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-10T16:09:14.848610" level="INFO">Clicking element 'css=.sc-aXZVg &gt; .botao-default'.</msg>
+<arg>${DEFAULT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T16:09:14.847613" elapsed="0.060838"/>
+</kw>
+<status status="PASS" start="2024-02-10T16:09:14.847613" elapsed="0.060838"/>
+</kw>
+<kw name="Verificar aviso de campo obrigatório" owner="services">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${REQUIRED_FIELD}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-10T16:09:14.910445" elapsed="0.032912"/>
+</kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-02-10T13:40:05.725645" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-161.png"&gt;&lt;img src="selenium-screenshot-161.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-02-10T13:40:05.725645" level="FAIL">Element with locator 'xpath=//table[@class='table table-striped table-hover']//tbody/tr[1]' not found.</msg>
-<arg>${TABLE_LOCATOR}//tbody/tr[1]</arg>
+<msg time="2024-02-10T16:09:14.968291" level="INFO">Element 'xpath=//form[2]//div[@class='invalid-feedback']' is displayed.</msg>
+<arg>${REQUIRED_FIELD}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-02-10T13:40:05.568067" elapsed="0.164565">Element with locator 'xpath=//table[@class='table table-striped table-hover']//tbody/tr[1]' not found.</status>
+<status status="PASS" start="2024-02-10T16:09:14.944354" elapsed="0.023937"/>
 </kw>
-<msg time="2024-02-10T13:40:05.732632" level="INFO">${element_visible} = False</msg>
-<var>${element_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>${TABLE_LOCATOR}//tbody/tr[1]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-10T13:40:05.567069" elapsed="0.166554"/>
-</kw>
-<if>
-<branch type="IF" condition="'${element_visible}' == 'False'">
-<kw name="Fail" owner="BuiltIn">
-<msg time="2024-02-10T13:40:05.735618" level="FAIL">Filtro não exibe nenhum resultado!</msg>
-<arg>Filtro não exibe nenhum resultado!</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="FAIL" start="2024-02-10T13:40:05.734623" elapsed="0.001995">Filtro não exibe nenhum resultado!</status>
-</kw>
-<status status="FAIL" start="2024-02-10T13:40:05.733623" elapsed="0.002995">Filtro não exibe nenhum resultado!</status>
-</branch>
-<branch type="ELSE">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nTudo certo!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-10T13:40:05.737612" elapsed="0.001000"/>
-</kw>
-<status status="NOT RUN" start="2024-02-10T13:40:05.736618" elapsed="0.001994"/>
-</branch>
-<status status="FAIL" start="2024-02-10T13:40:05.733623" elapsed="0.004989">Filtro não exibe nenhum resultado!</status>
-</if>
-<status status="FAIL" start="2024-02-10T13:40:05.566071" elapsed="0.172541">Filtro não exibe nenhum resultado!</status>
+<status status="PASS" start="2024-02-10T16:09:14.909449" elapsed="0.059839"/>
 </kw>
 <kw name="Close your Browser" owner="setup_teardown" type="TEARDOWN">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-02-10T13:40:07.742295" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-02-10T16:09:16.971922" level="INFO">Slept 2 seconds.</msg>
 <arg>time_=2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-02-10T13:40:05.740604" elapsed="2.001691"/>
+<status status="PASS" start="2024-02-10T16:09:14.970286" elapsed="2.001636"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-10T13:40:07.742295" elapsed="2.427437"/>
+<status status="PASS" start="2024-02-10T16:09:16.971922" elapsed="2.227161"/>
 </kw>
-<status status="PASS" start="2024-02-10T13:40:05.740604" elapsed="4.429128"/>
+<status status="PASS" start="2024-02-10T16:09:14.970286" elapsed="4.228797"/>
 </kw>
-<status status="FAIL" start="2024-02-10T13:40:00.382327" elapsed="9.788450">Filtro não exibe nenhum resultado!</status>
+<status status="PASS" start="2024-02-10T16:09:10.982022" elapsed="8.218066"/>
 </test>
-<status status="FAIL" start="2024-02-10T13:40:00.042237" elapsed="10.130539"/>
+<status status="PASS" start="2024-02-10T16:09:10.654997" elapsed="8.547085"/>
 </suite>
-<status status="FAIL" start="2024-02-10T13:40:00.037252" elapsed="10.138516"/>
+<status status="PASS" start="2024-02-10T16:09:10.651006" elapsed="8.554068"/>
 </suite>
-<status status="FAIL" start="2024-02-10T13:39:59.998360" elapsed="10.180399"/>
+<status status="PASS" start="2024-02-10T16:09:10.621348" elapsed="8.587126"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Projeto-Final-Iqs">Projeto-Final-Iqs</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Projeto-Final-Iqs.Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test Competences">Projeto-Final-Iqs.Tests.Test Competences</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Projeto-Final-Iqs">Projeto-Final-Iqs</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Projeto-Final-Iqs.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Services">Projeto-Final-Iqs.Tests.Test Services</stat>
 </suite>
 </statistics>
 <errors>

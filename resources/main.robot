@@ -9,3 +9,4 @@ Resource    shared/setup_teardown.robot
 Resource    pages/login.robot
 Resource    pages/competences.robot
 Resource    pages/collaborators.robot
+Resource    pages/services.robot

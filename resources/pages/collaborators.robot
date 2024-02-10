@@ -1,7 +1,5 @@
 *** Settings ***
 Resource    ../main.robot
-Library    Collections
-Library    OperatingSystem
 
 *** Variables ***
 ${BUTTON_COLLAB}    xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div/div[2]/div/div/a/div/button/span
@@ -120,6 +118,7 @@ Verificar se há resultados
         ELSE
         Log To Console    \nTudo certo!
     END
+    
 Pegar o nome da competência do colaborador
     Wait Until Element Is Visible    ${FILTER_SEARCH_COMPETENCE.CompetenceName}    timeout=5s
     ${COMPETENCE}=    Get Text    ${FILTER_SEARCH_COMPETENCE.CompetenceName}
