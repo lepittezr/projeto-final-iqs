@@ -285,3 +285,12 @@ TC053 - Excluir Serviço Vinculado
     Clicar no ícone da lixeira
     Clicar no botão modal
     Checar mensagem de sucesso
+
+TC054 - Excluir Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone da lixeira
+    Clicar no botão modal
+    Checar mensagem de sucesso

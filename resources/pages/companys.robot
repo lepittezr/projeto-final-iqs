@@ -121,3 +121,5 @@ E pesquisar o item coletado
     [Arguments]    ${SEARCH}=
     Click Element    ${FILTER_INPUT}
     Input Text    ${FILTER_INPUT}    ${SEARCH}
+    
+    
