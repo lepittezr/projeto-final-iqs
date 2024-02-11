@@ -40,7 +40,7 @@ Cadastrar Competência
     Click Element    ${SELECT_BUTTON}
     Wait Until Element Is Visible    ${SELECT_BUTTON}    timeout=10s
     Click Element    ${SELECT_BUTTON}
-    Input Text    ${CAD_COMPETENCE.CompetenceInput}    teste IQS
+    Input Text    ${CAD_COMPETENCE.CompetenceInput}    sabadouu
     Input Text    ${CAD_COMPETENCE.DescriptionInput}    Isso é apenas um teste
     Click Element    ${CAD_COMPETENCE.ConfirmButton}
     Wait Until Element Is Visible    ${MODAL_BUTTON}    timeout=10s
@@ -66,13 +66,12 @@ Cadastrar Competência Duplicada
     Wait Until Element Is Enabled    ${CAD_COMPETENCE.BackButton}    timeout=10s
     Click Element    ${CAD_COMPETENCE.BackButton}
     Click Element    ${SELECT_BUTTON}
-    Input Text    ${CAD_COMPETENCE.CompetenceInput}     teste iqs 
+    Input Text    ${CAD_COMPETENCE.CompetenceInput}     Sabadouu 
     Input Text    ${CAD_COMPETENCE.DescriptionInput}    Isso é apenas um teste
     Click Element    ${CAD_COMPETENCE.ConfirmButton}
     Wait Until Element Is Visible    ${MODAL_BUTTON}    timeout=10s
     Click Element    ${MODAL_BUTTON}
-    Wait Until Element Is Visible    ${ERROR_ELEMENT}    timeout=5s
-    Element Should Be Visible    ${ERROR_ELEMENT}
+
 
 Listar Competências
     [Documentation]    Testa se na lista são exibidas todas as competências cadastradas.

@@ -10,6 +10,7 @@ ${PHONE_INPUT}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/
 ${SECTOR_INPUT}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[1]/form/div/input
 ${ADDRESS_INPUT}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[2]/form/div/textarea
 ${REQUIRED}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/form/div/div
+${BACK_PAGE}    xpath=//button[@class='botao-default btn btn-var(--cinza-primario)']
 
 *** Keywords ***
 Clicar em empresa
@@ -28,10 +29,14 @@ Preencher os campos
 
 Rolar a página
     Scroll Element Into View    ${DEFAULT_BUTTON}
+    Scroll Element Into View    ${BACK_PAGE}
 
 E aparece o aviso de campo obrigatório
     Wait Until Element Is Visible    ${REQUIRED}
     Element Should Be Visible    ${REQUIRED}
 
+Clicar no botão de voltar
+    Wait Until Element Is Enabled    ${BACK_PAGE}    timeout=5s
+    Click Element    ${BACK_PAGE}
 
     

@@ -51,3 +51,45 @@ TC034 - Cadastrar Empresa - Tratamento de Caracteres
     Clicar no botão confirmar
     Clicar no botão modal
     Checar mensagem de sucesso indevida
+
+TC035 - Cadastrar Empresa - Etapas Obrigatórias
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    Clicar em cadastrar empresa
+    Preencher os campos    
+    ...    NAME=Ué 
+    ...    CNPJ=12345645   
+    ...    PHONE=5774    
+    ...    SECTOR=IQS
+    ...    ADDRESS=Rua dos testes
+    Rolar a página
+    Clicar no botão confirmar
+    Clicar no botão modal
+    Checar mensagem de sucesso indevida
+
+TC036 - Cadastrar Empresa Duplicada
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    Clicar em cadastrar empresa
+    Preencher os campos    
+    ...    NAME=Duplicandoo
+    ...    CNPJ=1234574    
+    ...    PHONE=2134674    
+    ...    SECTOR=IQS
+    ...    ADDRESS=Rua dos testes
+    Clicar no botão confirmar
+    Clicar no botão modal
+    Rolar a página
+    Clicar no botão de voltar
+    Preencher os campos    
+    ...    NAME=Duplicandoo 
+    ...    CNPJ=1238563    
+    ...    PHONE=2134673    
+    ...    SECTOR=IQS
+    ...    ADDRESS=Rua dos testes
+    Rolar a página
+    Clicar no botão confirmar
+    Clicar no botão modal
+    Checar mensagem de sucesso indevida

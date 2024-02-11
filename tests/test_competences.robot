@@ -20,6 +20,7 @@ TC006 - Cadastro de Competências Duplicadas
     Selecionar projeto
     Cadastrar Competência
     Cadastrar Competência Duplicada
+    Checar mensagem de sucesso indevida
 
 TC007 - Listar Competências Cadastradas
     Realizar Login Válido Gestor
