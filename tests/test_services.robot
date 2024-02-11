@@ -33,7 +33,7 @@ TC024 - Cadastrar Serviço - Etapas Obrigatórias
     Preencher campos nome "updateeee" e descrição "eeeee"
     Clicar no botão confirmar
     Clicar no botão modal
-    Checar mensagem de sucesso antes de finalizar as etapas obrigatórias
+    Checar mensagem de sucesso indevida
 
 TC025 - Listar Todos os Serviços Cadastrados
     Realizar Login Válido Gestor

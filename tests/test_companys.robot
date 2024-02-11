@@ -35,3 +35,19 @@ TC033 - Cadastrar Empresa - Campos Obrigatórios
     Rolar a página
     Clicar no botão confirmar
     E aparece o aviso de campo obrigatório    
+
+TC034 - Cadastrar Empresa - Tratamento de Caracteres
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    Clicar em cadastrar empresa
+    Preencher os campos    
+    ...    NAME=Exemplo2 
+    ...    CNPJ=eeeee    
+    ...    PHONE=2134564    
+    ...    SECTOR=IQS
+    ...    ADDRESS=Rua dos testes
+    Rolar a página
+    Clicar no botão confirmar
+    Clicar no botão modal
+    Checar mensagem de sucesso indevida

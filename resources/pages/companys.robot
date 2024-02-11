@@ -32,4 +32,6 @@ Rolar a página
 E aparece o aviso de campo obrigatório
     Wait Until Element Is Visible    ${REQUIRED}
     Element Should Be Visible    ${REQUIRED}
+
+
     

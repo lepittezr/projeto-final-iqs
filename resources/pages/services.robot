@@ -38,14 +38,14 @@ Verificar aviso de campo obrigatório
     Wait Until Element Is Enabled    ${REQUIRED_FIELD}    timeout=5s
     Element Should Be Visible    ${REQUIRED_FIELD}
 
-Checar mensagem de sucesso antes de finalizar as etapas obrigatórias
+Checar mensagem de sucesso indevida
     Sleep    1s
     ${element_error_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${ERROR_ELEMENT}
     ${element_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${SUCCESS_ELEMENT}
     IF    ${element_error_visible}
-         Fail    Já cadastrado!
+         Log To Console    Deu errado? Então está certo!
     ELSE IF    ${element_visible}
-        Fail    Serviço está sendo cadastrado sem competência.
+        Fail    Opa! Isso não deveria ter dado certo!
     END
 
 Clicar em buscar serviço
