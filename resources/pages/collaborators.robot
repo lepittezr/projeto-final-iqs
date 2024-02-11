@@ -6,7 +6,7 @@ ${BUTTON_COLLAB}    xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/di
 ${DETAIL_COLLAB}    css=tr:nth-child(7) svg:nth-child(1)
 ${CHECK_NAME}=    Get Value    xpath=//*[@id="root"]/div[1]/div/div[2]/div/div/div/div[2]/div/div[1]/table/tbody/tr[1]/td[1]
 ${COMPANIE}=    Get Value    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[2]/p
-${VIEW_COMPETENCE}    css=.container > div:nth-of-type(3) strong
+${VIEW_COMPETENCE_COLLAB}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[3]/div/strong
 ${DEFAULT_BUTTON}    css=.sc-aXZVg > .botao-default
 ${BACK_BUTTON}    xpath=//button[@class='botao-default btn btn-var(--cinza-primario)']
 ${TRASH_ICON}    css=tbody > tr:nth-of-type(1) [color='var(--vermelho-constraste)']
@@ -69,8 +69,8 @@ Verificar se empresa foi atualizada
         Fail    Empresa não atualizada!
     END
 
-Clicar na opção Visualizar Competências
-    Click Element    ${VIEW_COMPETENCE}
+Clicar na opção Visualizar Competências do colaborador
+    Click Element    ${VIEW_COMPETENCE_COLLAB}
 
 Visualizar competências disponíveis
     Click Element    ${DEFAULT_BUTTON}
@@ -86,9 +86,6 @@ Clicar nos botões para confirmar
     Click Element    ${DEFAULT_BUTTON}
     Wait Until Element Is Visible    ${ADD_COMPETENCE.ButtonConfirm}    timeout=5s
     Click Element    ${ADD_COMPETENCE.ButtonConfirm}
-
-    
-
 
 Clicar no ícone da lixeira
     Wait Until Element Is Enabled    ${TRASH_ICON}    timeout=5s

@@ -6,6 +6,11 @@ ${SELECT_BUTTON}    xpath=//*[@id="root"]/div[1]/div/div[2]/div/div/div/div[2]/d
 ${MODAL_BUTTON}    css=.hDPZGJ > .botao-default
 ${SUCCESS_ELEMENT}    css=.Toastify__toast--success
 ${ERROR_ELEMENT}    css=.Toastify__toast--error
+${LAST_PAGE}    css:.area-paginacao > div:nth-of-type(5) > [stroke='currentColor']
+${FIRST_PAGE}    css:.area-paginacao > div:nth-of-type(1) > [stroke='currentColor']
+${FILTER_INPUT}    xpath=//input[@class='form-control']
+${ITEM_COUNT}
+${LAST_ITEM}
 
 
 &{CAD_COMPETENCE}
@@ -26,12 +31,6 @@ ${ERROR_ELEMENT}    css=.Toastify__toast--error
 ...    SaveButton=xpath=//div[2]/button/span
 ...    DeleteIcon=css=tr:nth-child(2) svg:nth-child(2)
 ...    DeleteIcon2=css=.container > div > svg
-
-&{FILTER_COMPETENCE}
-...    FilterInput=xpath=//input[@class='form-control']
-...    LastPage=css:.area-paginacao > div:nth-of-type(5) > [stroke='currentColor']
-...    FirstPage=css:.area-paginacao > div:nth-of-type(1) > [stroke='currentColor']
-...    TableLocator=xpath=//table[@class='table table-striped table-hover']
 
 
 *** Keywords ***
@@ -113,15 +112,21 @@ Excluir Competência Detalhes
     Click Element    ${SEARCH_COMPETENCE.DeleteIcon2}
     Click Element    ${MODAL_BUTTON}
 
-Filtrar Busca de Competência
+Rolar para última página
     [Documentation]    Testa se o filtro de busca funciona corretamente.
-    Wait Until Page Contains Element    ${FILTER_COMPETENCE.LastPage}    timeout=5s
-    Scroll Element Into View    ${FILTER_COMPETENCE.LastPage}
-    Click Element At Coordinates    ${FILTER_COMPETENCE.LastPage}    10    10
-    ${item_count}=    Get Element Count    ${FILTER_COMPETENCE.TableLocator}//tbody/tr
-    ${last_item}=    Get Text    xpath=(//table[@class='table table-striped table-hover']//tbody/tr[${item_count}])/td[1]
-    Click Element    ${FILTER_COMPETENCE.FirstPage}
-    Click Element    ${FILTER_COMPETENCE.FilterInput}
-    Input Text    ${FILTER_COMPETENCE.FilterInput}    ${last_item}
+    Wait Until Page Contains Element    ${LAST_PAGE}    timeout=5s
+    Scroll Element Into View    ${LAST_PAGE}
+    Click Element At Coordinates    ${LAST_PAGE}    10    10
 
-    
+Pegar item da lista
+    ${ITEM_COUNT}=    Get Element Count    ${TABLE_LOCATOR}//tbody/tr
+    ${LAST_ITEM}=    Get Text    xpath=(//table[@class='table table-striped table-hover']//tbody/tr[${ITEM_COUNT}])/td[1]
+    Set Global Variable    ${ITEM_COUNT}
+    Set Global Variable    ${LAST_ITEM}
+
+Voltar para primeira página
+    Click Element    ${FIRST_PAGE}
+
+Pesquisar o nome coletado
+    Click Element    ${FILTER_INPUT}
+    Input Text    ${FILTER_INPUT}    ${LAST_ITEM}

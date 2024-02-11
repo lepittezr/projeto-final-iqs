@@ -30,6 +30,6 @@ Realizar Login Inválido
     Element Should Be Visible    ${WARNING_ERROR}
     Location Should Be    url=${URL}
 
-Selecionar Projeto
+Selecionar projeto
     Wait Until Element Is Enabled    ${SELECT_PROJECT}    timeout=10s
     Click Element    ${SELECT_PROJECT}
