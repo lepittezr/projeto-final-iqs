@@ -99,3 +99,10 @@ TC037 - Listar Empresas Cadastradas
     Clicar em empresa
     E clicar em buscar empresa
     Verificar se há resultados
+
+TC038 - Visualizar Detalhes da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
