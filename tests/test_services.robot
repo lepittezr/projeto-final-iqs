@@ -13,7 +13,7 @@ TC022 - Cadastrar Serviço
     Preencher campos nome "Test again" e descrição "apenas testando"
     Clicar no botão confirmar
     Clicar no botão modal
-    Checar alerta
+    Checar mensagem de sucesso
 
 TC023 - Cadastrar Serviço - Campos Obrigatórios
     Realizar Login Válido Gestor
@@ -60,7 +60,7 @@ TC027 - Editar Serviço
     Rolar a tela
     Clicar no botão "salvar"
     Clicar no botão modal
-    Checar alerta
+    Checar mensagem de sucesso
 
 TC028 - Excluir Serviço
     Realizar Login Válido Gestor
@@ -100,4 +100,4 @@ TC031 - Adicionar Competência ao Serviço
     Selecionar as competências que deseja vincular
     Clicar para confirmar
     Confirmar no modal
-    Checar alerta
+    Checar mensagem de sucesso

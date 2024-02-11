@@ -30,7 +30,7 @@ Clicar no botão confirmar
 Clicar no botão modal
     Click Element    ${MODAL_BUTTON}
 
-Checar alerta
+Checar mensagem de sucesso
     Wait Until Element Is Visible    ${SUCCESS_ELEMENT}
     Element Should Be Visible    ${SUCCESS_ELEMENT}
 
