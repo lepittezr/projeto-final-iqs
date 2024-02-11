@@ -9,6 +9,7 @@ ${CNPJ_INPUT}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/d
 ${PHONE_INPUT}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[3]/form/div/input
 ${SECTOR_INPUT}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[1]/form/div/input
 ${ADDRESS_INPUT}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[2]/form/div/textarea
+${REQUIRED}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/form/div/div
 
 *** Keywords ***
 Clicar em empresa
@@ -28,3 +29,7 @@ Preencher os campos
 Rolar a página
     Scroll Element Into View    ${DEFAULT_BUTTON}
 
+E aparece o aviso de campo obrigatório
+    Wait Until Element Is Visible    ${REQUIRED}
+    Element Should Be Visible    ${REQUIRED}
+    

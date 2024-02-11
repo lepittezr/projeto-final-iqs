@@ -20,3 +20,18 @@ TC032 - Realizar o Cadastro de uma Empresa
     Clicar no botão confirmar
     Clicar no botão modal
     Checar mensagem de sucesso
+
+TC033 - Cadastrar Empresa - Campos Obrigatórios
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    Clicar em cadastrar empresa
+    Preencher os campos    
+    ...    NAME=
+    ...    CNPJ=
+    ...    PHONE=21346774    
+    ...    SECTOR=IQS
+    ...    ADDRESS=Rua dos testes
+    Rolar a página
+    Clicar no botão confirmar
+    E aparece o aviso de campo obrigatório    

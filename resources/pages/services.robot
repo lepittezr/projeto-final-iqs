@@ -35,7 +35,7 @@ Checar mensagem de sucesso
     Element Should Be Visible    ${SUCCESS_ELEMENT}
 
 Verificar aviso de campo obrigatório
-    Wait Until Element Is Enabled    ${REQUIRED_FIELD}
+    Wait Until Element Is Enabled    ${REQUIRED_FIELD}    timeout=5s
     Element Should Be Visible    ${REQUIRED_FIELD}
 
 Checar mensagem de sucesso antes de finalizar as etapas obrigatórias
