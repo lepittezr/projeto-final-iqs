@@ -106,3 +106,65 @@ TC038 - Visualizar Detalhes da Empresa
     Clicar em empresa
     E clicar em buscar empresa
     Clicar no ícone de detalhes
+
+TC039 - Editar Nome da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
+    E clicar para editar o nome
+    E colocar um nome    NAME=testEdit
+    Clicar no botão "salvar"
+    Clicar no botão modal
+    Verificar mensagem de sucesso
+
+TC040 - Editar CNPJ da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
+    E clicar para editar o cnpj
+    E colocar um cnpj    CNPJ=113456745647
+    Clicar no botão "salvar"
+    Clicar no botão modal
+    Verificar mensagem de sucesso
+
+TC041 - Editar Telefone da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
+    E clicar para editar o telefone
+    E colocar um telefone    Phone=113456745647
+    Clicar no botão "salvar"
+    Clicar no botão modal
+    Verificar mensagem de sucesso
+
+TC042 - Editar Setor da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
+    E clicar para editar o setor
+    E colocar um setor    Sector=Setor de edição
+    Clicar no botão "salvar"
+    Clicar no botão modal
+    Verificar mensagem de sucesso
+
+TC043 - Verificar Validação na Edição da Nome de Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Pegar um nome de empresa
+    Clicar no ícone de detalhes
+    E clicar para editar o nome
+    E colocar um nome    NAME=${RANDOM_COMPANY}
+    Clicar no botão "salvar"
+    Clicar no botão modal
+    Checar mensagem de sucesso indevida
+

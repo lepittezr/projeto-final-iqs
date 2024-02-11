@@ -58,7 +58,7 @@ Rolar página e confirmar
     Click Element    ${DEFAULT_BUTTON}
     Click Element    ${MODAL_BUTTON}
 
-Verificar mensagem de confirmação
+Verificar mensagem de sucesso
     Wait Until Element Is Visible    ${SUCCESS_ELEMENT}    timeout=5s
     Element Should Be Visible    ${SUCCESS_ELEMENT}
 

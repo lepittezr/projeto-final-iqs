@@ -12,6 +12,17 @@ ${ADDRESS_INPUT}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2
 ${REQUIRED}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/form/div/div
 ${BACK_PAGE}    xpath=//button[@class='botao-default btn btn-var(--cinza-primario)']
 ${SEARCH_COMPANY}    xpath=//button[.='Buscar Empresa']
+${RANDOM_COMPANY}
+
+&{EDIT_COMPANY}
+...    EditName=css=.mb-3 > div:nth-of-type(1) [stroke='currentColor']
+...    EditCnpj=css=.mb-3 > div:nth-of-type(2) [stroke='currentColor']
+...    EditPhone=.mb-3 > div:nth-of-type(3) [stroke='currentColor']
+...    EditSector=.mb-3 > div:nth-of-type(4) [stroke='currentColor']
+...    NameInput=xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[1]/input
+...    CnpjInput=xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[2]/input
+...    PhoneInput=xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[3]/input
+...    SectorInput=xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[4]/input
 
 *** Keywords ***
 Clicar em empresa
@@ -43,5 +54,35 @@ Clicar no botão de voltar
 E clicar em buscar empresa
     Click Element     ${SEARCH_COMPANY}
 
+E clicar para editar o nome
+    Click Element    ${EDIT_COMPANY.EditName}
 
-    
+E clicar para editar o cnpj
+    Click Element    ${EDIT_COMPANY.EditCnpj}
+
+E clicar para editar o telefone
+    Click Element    ${EDIT_COMPANY.EditPhone}
+
+E clicar para editar o setor
+    Click Element    ${EDIT_COMPANY.EditSector}
+
+E colocar um nome
+    [Arguments]    ${NAME}=
+    Input Text    ${EDIT_COMPANY.NameInput}       ${NAME}
+
+E colocar um cnpj
+    [Arguments]    ${CNPJ}=
+    Input Text    ${EDIT_COMPANY.CnpjInput}       ${CNPJ}
+
+E colocar um telefone
+    [Arguments]    ${PHONE}=
+    Input Text    ${EDIT_COMPANY.PhoneInput}      ${PHONE}
+
+E colocar um setor
+    [Arguments]    ${SECTOR}=
+    Input Text    ${EDIT_COMPANY.SectorInput}     ${SECTOR}
+
+Pegar um nome de empresa
+    Wait Until Element Is Visible    ${TABLE_LOCATOR}
+    ${RANDOM_COMPANY}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[4]/td[1]
+    Set Global Variable    ${RANDOM_COMPANY}

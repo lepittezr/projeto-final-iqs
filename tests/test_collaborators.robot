@@ -24,7 +24,7 @@ TC015 - Atualizar Empresa do Colaborador
     Clicar no ícone de edição
     Selecionar uma empresa
     Rolar página e confirmar
-    Verificar mensagem de confirmação
+    Verificar mensagem de sucesso
     Verificar se empresa foi atualizada
 
 TC016 - Visualizar Competências do Colaborador
@@ -60,7 +60,7 @@ TC019 - Excluir Vínculo de Competência com Colaborador
     Clicar na opção Visualizar Competências do colaborador
     Clicar no ícone da lixeira
     Confirmar exclusão
-    Verificar mensagem de confirmação
+    Verificar mensagem de sucesso
 
 TC020 - Filtrar Colaborador por Empresa
     Realizar Login Válido Gestor
