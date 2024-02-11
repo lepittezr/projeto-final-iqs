@@ -13,6 +13,7 @@ ${REQUIRED}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div
 ${BACK_PAGE}    xpath=//button[@class='botao-default btn btn-var(--cinza-primario)']
 ${SEARCH_COMPANY}    xpath=//button[.='Buscar Empresa']
 ${RANDOM_COMPANY}
+${VIEW_SERVICE}    xpath=//strong[contains(.,'Visualizar Serviços')]
 
 &{EDIT_COMPANY}
 ...    EditName=css=.mb-3 > div:nth-of-type(1) [stroke='currentColor']
@@ -86,3 +87,7 @@ Pegar um nome de empresa
     Wait Until Element Is Visible    ${TABLE_LOCATOR}
     ${RANDOM_COMPANY}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[4]/td[1]
     Set Global Variable    ${RANDOM_COMPANY}
+
+Clicar em visualizar serviços
+    Wait Until Element Is Enabled    ${VIEW_SERVICE}    timeout=5s
+    Click Element    ${VIEW_SERVICE}

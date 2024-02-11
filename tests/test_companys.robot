@@ -11,8 +11,8 @@ TC032 - Realizar o Cadastro de uma Empresa
     Clicar em empresa
     Clicar em cadastrar empresa
     Preencher os campos    
-    ...    NAME=Exemplo2 
-    ...    CNPJ=1234567890    
+    ...    NAME=Exemplo245
+    ...    CNPJ=1243456743890    
     ...    PHONE=21346774    
     ...    SECTOR=IQS
     ...    ADDRESS=Rua dos testes
@@ -191,3 +191,11 @@ TC045 - Verificar Validação ao Editar o Telefone da Empresa
     Clicar no botão "salvar"
     Clicar no botão modal
     Checar mensagem de sucesso indevida
+
+TC046 - Visualizar Serviços da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
+    Clicar em visualizar serviços
