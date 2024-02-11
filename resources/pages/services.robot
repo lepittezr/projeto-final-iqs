@@ -77,6 +77,7 @@ Clicar na opção Visualizar Competências do serviço
     Click Element    ${VIEW_COMPETENCES_SERVICE}
 
 Clicar no botão de adicionar
+    Scroll Element Into View    ${DEFAULT_BUTTON}
     Click Element    ${DEFAULT_BUTTON}
 
 Clicar para confirmar

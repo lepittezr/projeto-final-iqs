@@ -212,3 +212,23 @@ TC047 - Vincular Serviço à Empresa
     Rolar a página
     Clicar no botão "salvar"
     Clicar no botão modal
+    Checar mensagem de sucesso
+
+TC048 - Filtrar Busca por Serviços da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
+    Clicar em visualizar serviços
+    Clicar no botão de adicionar
+    Selecionar o que que deseja vincular
+    Rolar a página
+    Clicar no botão "salvar"
+    Clicar no botão modal
+    Checar mensagem de sucesso
+    E pegar o nome do primeiro item da lista
+    Rolar a página
+    Clicar no botão de voltar
+    E pesquisar o mesmo nome
+    Verificar se há resultados

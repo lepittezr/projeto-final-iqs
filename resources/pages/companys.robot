@@ -14,6 +14,7 @@ ${BACK_PAGE}    xpath=//button[@class='botao-default btn btn-var(--cinza-primari
 ${SEARCH_COMPANY}    xpath=//button[.='Buscar Empresa']
 ${RANDOM_COMPANY}
 ${VIEW_SERVICE}    xpath=//strong[contains(.,'Visualizar Serviços')]
+${FIRST_ITEM}
 
 &{EDIT_COMPANY}
 ...    EditName=css=.mb-3 > div:nth-of-type(1) [stroke='currentColor']
@@ -92,3 +93,11 @@ Clicar em visualizar serviços
     Wait Until Element Is Enabled    ${VIEW_SERVICE}    timeout=5s
     Click Element    ${VIEW_SERVICE}
 
+E pegar o nome do primeiro item da lista
+    Wait Until Element Is Visible    ${TABLE_LOCATOR}
+    ${FIRST_ITEM}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[1]/td[1]
+    Set Global Variable    ${FIRST_ITEM}
+
+E pesquisar o mesmo nome
+    Click Element    ${FILTER_INPUT}
+    Input Text    ${FILTER_INPUT}    ${FIRST_ITEM}
