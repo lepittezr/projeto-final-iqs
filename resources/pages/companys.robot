@@ -17,8 +17,8 @@ ${RANDOM_COMPANY}
 &{EDIT_COMPANY}
 ...    EditName=css=.mb-3 > div:nth-of-type(1) [stroke='currentColor']
 ...    EditCnpj=css=.mb-3 > div:nth-of-type(2) [stroke='currentColor']
-...    EditPhone=.mb-3 > div:nth-of-type(3) [stroke='currentColor']
-...    EditSector=.mb-3 > div:nth-of-type(4) [stroke='currentColor']
+...    EditPhone=css=.mb-3 > div:nth-of-type(3) [stroke='currentColor']
+...    EditSector=css=.mb-3 > div:nth-of-type(4) [stroke='currentColor']
 ...    NameInput=xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[1]/input
 ...    CnpjInput=xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[2]/input
 ...    PhoneInput=xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[3]/input

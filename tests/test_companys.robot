@@ -138,7 +138,7 @@ TC041 - Editar Telefone da Empresa
     E clicar em buscar empresa
     Clicar no ícone de detalhes
     E clicar para editar o telefone
-    E colocar um telefone    Phone=113456745647
+    E colocar um telefone    PHONE=113456745647
     Clicar no botão "salvar"
     Clicar no botão modal
     Verificar mensagem de sucesso
@@ -150,7 +150,7 @@ TC042 - Editar Setor da Empresa
     E clicar em buscar empresa
     Clicar no ícone de detalhes
     E clicar para editar o setor
-    E colocar um setor    Sector=Setor de edição
+    E colocar um setor    SECTOR=Setor de edição
     Clicar no botão "salvar"
     Clicar no botão modal
     Verificar mensagem de sucesso
@@ -168,3 +168,26 @@ TC043 - Verificar Validação na Edição da Nome de Empresa
     Clicar no botão modal
     Checar mensagem de sucesso indevida
 
+TC044 - Verificar Validação ao Editar o CNPJ da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
+    E clicar para editar o cnpj
+    E colocar um cnpj    CNPJ=nãopodeletra
+    Clicar no botão "salvar"
+    Clicar no botão modal
+    Checar mensagem de sucesso indevida
+
+TC045 - Verificar Validação ao Editar o Telefone da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
+    E clicar para editar o telefone
+    E colocar um telefone    PHONE=1
+    Clicar no botão "salvar"
+    Clicar no botão modal
+    Checar mensagem de sucesso indevida
