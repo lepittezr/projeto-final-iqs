@@ -199,3 +199,16 @@ TC046 - Visualizar Serviços da Empresa
     E clicar em buscar empresa
     Clicar no ícone de detalhes
     Clicar em visualizar serviços
+
+TC047 - Vincular Serviço à Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
+    Clicar em visualizar serviços
+    Clicar no botão de adicionar
+    Selecionar o que que deseja vincular
+    Rolar a página
+    Clicar no botão "salvar"
+    Clicar no botão modal

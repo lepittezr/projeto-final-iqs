@@ -75,7 +75,7 @@ Clicar na opção Visualizar Competências do colaborador
 Visualizar competências disponíveis
     Click Element    ${DEFAULT_BUTTON}
 
-Selecionar as competências que deseja vincular
+Selecionar o que que deseja vincular
     Wait Until Element Is Visible    ${ADD_COMPETENCE.OneExample}    timeout=5s
     Click Element    ${ADD_COMPETENCE.OneExample}
     Click Element    ${ADD_COMPETENCE.TwoExample}
