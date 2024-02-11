@@ -111,9 +111,9 @@ Pesquisar o nome da empresa
 Verificar se há resultados
     ${element_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${TABLE_LOCATOR}//tbody/tr[1]
     IF    '${element_visible}' == 'False'
-        Fail   Filtro não exibe nenhum resultado!
+        Fail   Nenhum resultado obtido!
         ELSE
-        Log To Console    \nTudo certo!
+        Log To Console    \nTudo certo! Há itens na lista!
     END
     
 Pegar o nome da competência do colaborador

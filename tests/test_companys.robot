@@ -93,3 +93,9 @@ TC036 - Cadastrar Empresa Duplicada
     Clicar no botão confirmar
     Clicar no botão modal
     Checar mensagem de sucesso indevida
+TC037 - Listar Empresas Cadastradas
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Verificar se há resultados

@@ -11,6 +11,7 @@ ${SECTOR_INPUT}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]
 ${ADDRESS_INPUT}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[2]/form/div/textarea
 ${REQUIRED}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/form/div/div
 ${BACK_PAGE}    xpath=//button[@class='botao-default btn btn-var(--cinza-primario)']
+${SEARCH_COMPANY}    xpath=//button[.='Buscar Empresa']
 
 *** Keywords ***
 Clicar em empresa
@@ -38,5 +39,9 @@ E aparece o aviso de campo obrigatório
 Clicar no botão de voltar
     Wait Until Element Is Enabled    ${BACK_PAGE}    timeout=5s
     Click Element    ${BACK_PAGE}
+
+E clicar em buscar empresa
+    Click Element     ${SEARCH_COMPANY}
+
 
     
