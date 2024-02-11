@@ -15,6 +15,9 @@ ${SEARCH_COMPANY}    xpath=//button[.='Buscar Empresa']
 ${RANDOM_COMPANY}
 ${VIEW_SERVICE}    xpath=//strong[contains(.,'Visualizar Serviços')]
 ${FIRST_ITEM}
+${CNPJ_LIST}
+${PHONE_LIST}
+${SECTOR_LIST}
 
 &{EDIT_COMPANY}
 ...    EditName=css=.mb-3 > div:nth-of-type(1) [stroke='currentColor']
@@ -98,6 +101,23 @@ E pegar o nome do primeiro item da lista
     ${FIRST_ITEM}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[1]/td[1]
     Set Global Variable    ${FIRST_ITEM}
 
-E pesquisar o mesmo nome
+Pegar um cnpj da lista
+    Wait Until Element Is Visible    ${TABLE_LOCATOR}    timeout=5s
+    ${CNPJ_LIST}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[1]/td[2]
+    Set Global Variable    ${CNPJ_LIST}
+
+Pegar um telefone da lista
+    Wait Until Element Is Visible    ${TABLE_LOCATOR}    timeout=5s
+    ${PHONE_LIST}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[1]/td[3]
+    Set Global Variable    ${PHONE_LIST}
+
+Pegar um setor da lista
+    Wait Until Element Is Visible    ${TABLE_LOCATOR}    timeout=5s
+    ${SECTOR_LIST}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[1]/td[4]
+    Set Global Variable    ${SECTOR_LIST}
+   
+
+E pesquisar o item coletado
+    [Arguments]    ${SEARCH}=
     Click Element    ${FILTER_INPUT}
-    Input Text    ${FILTER_INPUT}    ${FIRST_ITEM}
+    Input Text    ${FILTER_INPUT}    ${SEARCH}

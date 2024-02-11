@@ -208,7 +208,7 @@ TC047 - Vincular Serviço à Empresa
     Clicar no ícone de detalhes
     Clicar em visualizar serviços
     Clicar no botão de adicionar
-    Selecionar o que que deseja vincular
+    Selecionar o que deseja vincular
     Rolar a página
     Clicar no botão "salvar"
     Clicar no botão modal
@@ -222,7 +222,7 @@ TC048 - Filtrar Busca por Serviços da Empresa
     Clicar no ícone de detalhes
     Clicar em visualizar serviços
     Clicar no botão de adicionar
-    Selecionar o que que deseja vincular
+    Selecionar o que deseja vincular
     Rolar a página
     Clicar no botão "salvar"
     Clicar no botão modal
@@ -230,5 +230,41 @@ TC048 - Filtrar Busca por Serviços da Empresa
     E pegar o nome do primeiro item da lista
     Rolar a página
     Clicar no botão de voltar
-    E pesquisar o mesmo nome
+    E pesquisar o item coletado    SEARCH=${FIRST_ITEM}
+    Verificar se há resultados
+
+TC049 - Filtrar Busca por Nome da Empresa    
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Pegar um nome de empresa
+    E pesquisar o item coletado    SEARCH=${RANDOM_COMPANY}
+    Verificar se há resultados
+
+TC050 - Filtrar Busca por CNPJ da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Pegar um cnpj da lista    
+    E pesquisar o item coletado    SEARCH=${CNPJ_LIST}
+    Verificar se há resultados
+
+TC051 - Filtrar Busca por Telefone da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Pegar um telefone da lista
+    E pesquisar o item coletado    SEARCH=${PHONE_LIST}
+    Verificar se há resultados
+
+TC052 - Filtrar Busca por Setor da Empresa
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Pegar um setor da lista    
+    E pesquisar o item coletado    SEARCH=${SECTOR_LIST}
     Verificar se há resultados

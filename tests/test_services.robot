@@ -97,7 +97,7 @@ TC031 - Adicionar Competência ao Serviço
     Clicar no ícone de detalhes
     Clicar na opção Visualizar Competências do serviço
     Clicar no botão de adicionar
-    Selecionar o que que deseja vincular
+    Selecionar o que deseja vincular
     Clicar para confirmar
     Confirmar no modal
     Checar mensagem de sucesso

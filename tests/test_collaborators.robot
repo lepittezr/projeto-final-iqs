@@ -49,7 +49,7 @@ TC018 - Vincular Competência ao Colaborador
     Exibir Detalhes de Colaborador
     Clicar na opção Visualizar Competências do colaborador
     Visualizar competências disponíveis
-    Selecionar o que que deseja vincular
+    Selecionar o que deseja vincular
     Clicar nos botões para confirmar
 
 TC019 - Excluir Vínculo de Competência com Colaborador
