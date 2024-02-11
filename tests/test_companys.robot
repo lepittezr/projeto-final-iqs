@@ -268,3 +268,20 @@ TC052 - Filtrar Busca por Setor da Empresa
     Pegar um setor da lista    
     E pesquisar o item coletado    SEARCH=${SECTOR_LIST}
     Verificar se há resultados
+
+TC053 - Excluir Serviço Vinculado
+    Realizar Login Válido Gestor
+    Selecionar projeto
+    Clicar em empresa
+    E clicar em buscar empresa
+    Clicar no ícone de detalhes
+    Clicar em visualizar serviços
+    Clicar no botão de adicionar
+    Selecionar o que deseja vincular
+    Rolar a página
+    Clicar no botão "salvar"
+    Clicar no botão modal
+    Checar mensagem de sucesso
+    Clicar no ícone da lixeira
+    Clicar no botão modal
+    Checar mensagem de sucesso
