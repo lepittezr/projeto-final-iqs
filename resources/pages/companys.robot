@@ -88,7 +88,7 @@ E colocar um setor
     Input Text    ${EDIT_COMPANY.SectorInput}     ${SECTOR}
 
 Pegar um nome de empresa
-    Wait Until Element Is Visible    ${TABLE_LOCATOR}
+    Wait Until Element Is Enabled    ${TABLE_LOCATOR}
     ${RANDOM_COMPANY}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[4]/td[1]
     Set Global Variable    ${RANDOM_COMPANY}
 
@@ -97,22 +97,22 @@ Clicar em visualizar serviços
     Click Element    ${VIEW_SERVICE}
 
 E pegar o nome do primeiro item da lista
-    Wait Until Element Is Visible    ${TABLE_LOCATOR}
+    Wait Until Element Is Enabled    ${TABLE_LOCATOR}
     ${FIRST_ITEM}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[1]/td[1]
     Set Global Variable    ${FIRST_ITEM}
 
 Pegar um cnpj da lista
-    Wait Until Element Is Visible    ${TABLE_LOCATOR}    timeout=5s
+    Wait Until Element Is Enabled    ${TABLE_LOCATOR}   
     ${CNPJ_LIST}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[1]/td[2]
     Set Global Variable    ${CNPJ_LIST}
 
 Pegar um telefone da lista
-    Wait Until Element Is Visible    ${TABLE_LOCATOR}    timeout=5s
+    Wait Until Element Is Enabled    ${TABLE_LOCATOR}    
     ${PHONE_LIST}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[1]/td[3]
     Set Global Variable    ${PHONE_LIST}
 
 Pegar um setor da lista
-    Wait Until Element Is Visible    ${TABLE_LOCATOR}    timeout=5s
+    Wait Until Element Is Enabled    ${TABLE_LOCATOR}    
     ${SECTOR_LIST}=    Get Text    ${TABLE_LOCATOR}//tbody/tr[1]/td[4]
     Set Global Variable    ${SECTOR_LIST}
    

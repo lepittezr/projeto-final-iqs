@@ -6,11 +6,13 @@ ${SELECT_BUTTON}    xpath=//*[@id="root"]/div[1]/div/div[2]/div/div/div/div[2]/d
 ${MODAL_BUTTON}    css=.hDPZGJ > .botao-default
 ${SUCCESS_ELEMENT}    css=.Toastify__toast--success
 ${ERROR_ELEMENT}    css=.Toastify__toast--error
+${INSERT_FIELD}    xpath=//*[@id="root"]/div[1]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div
 ${LAST_PAGE}    css:.area-paginacao > div:nth-of-type(5) > [stroke='currentColor']
 ${FIRST_PAGE}    css:.area-paginacao > div:nth-of-type(1) > [stroke='currentColor']
 ${FILTER_INPUT}    xpath=//input[@class='form-control']
 ${ITEM_COUNT}
 ${LAST_ITEM}
+
 
 
 &{CAD_COMPETENCE}
@@ -34,70 +36,30 @@ ${LAST_ITEM}
 
 
 *** Keywords ***
-Cadastrar Competência
-    [Documentation]    Testa o cadastro de uma nova competência.
+Clicar no botão para selecionar a primeira opção
     Wait Until Element Is Enabled    ${SELECT_BUTTON}    timeout=10s
     Click Element    ${SELECT_BUTTON}
-    Wait Until Element Is Visible    ${SELECT_BUTTON}    timeout=10s
-    Click Element    ${SELECT_BUTTON}
-    Input Text    ${CAD_COMPETENCE.CompetenceInput}    sabadouu
-    Input Text    ${CAD_COMPETENCE.DescriptionInput}    Isso é apenas um teste
-    Click Element    ${CAD_COMPETENCE.ConfirmButton}
-    Wait Until Element Is Visible    ${MODAL_BUTTON}    timeout=10s
-    Click Element    ${MODAL_BUTTON}
-    Wait Until Element Is Visible    ${SUCCESS_ELEMENT}    timeout=5s
-    Element Should Be Visible    ${SUCCESS_ELEMENT}
 
-Campos Obrigatórios Cadastrar Competência
-    [Documentation]    Testa se é permitido cadastrar uma nova competência sem inserir as informações obrigatórias.
-    Wait Until Element Is Visible    ${CAD_COMPETENCE.SelectButton}    timeout=10s
-    Click Element    ${CAD_COMPETENCE.SelectButton}
-    Wait Until Element Is Visible    ${CAD_COMPETENCE.SelectButton}    timeout=10s
-    Click Element    ${CAD_COMPETENCE.SelectButton}
-    Input Text    ${CAD_COMPETENCE.CompetenceInput}    Testezinho
-    Click Element    ${CAD_COMPETENCE.ConfirmButton}
-    Wait Until Element Is Enabled    ${CAD_COMPETENCE.ShowWarning}    timeout=10s
-    Element Should Be Enabled    ${CAD_COMPETENCE.ShowWarning}
+Checar aviso de campo obrigatório
+    Wait Until Element Is Enabled    ${INSERT_FIELD}    timeout=5s
+    Element Should Be Visible    ${INSERT_FIELD}
 
-Cadastrar Competência Duplicada
-    [Documentation]    Testa o cadastro de competências com o mesmo nome.
-    Wait Until Element Is Enabled    ${CAD_COMPETENCE.BackButton}    timeout=10s
-    Scroll Element Into View    ${CAD_COMPETENCE.BackButton}
-    Wait Until Element Is Enabled    ${CAD_COMPETENCE.BackButton}    timeout=10s
-    Click Element    ${CAD_COMPETENCE.BackButton}
-    Click Element    ${SELECT_BUTTON}
-    Input Text    ${CAD_COMPETENCE.CompetenceInput}     Sabadouu 
-    Input Text    ${CAD_COMPETENCE.DescriptionInput}    Isso é apenas um teste
-    Click Element    ${CAD_COMPETENCE.ConfirmButton}
-    Wait Until Element Is Visible    ${MODAL_BUTTON}    timeout=10s
-    Click Element    ${MODAL_BUTTON}
-
-
-Listar Competências
-    [Documentation]    Testa se na lista são exibidas todas as competências cadastradas.
-    Wait Until Element Is Visible    ${SELECT_BUTTON}    timeout=10s
-    Click Element    ${SELECT_BUTTON}
-    Wait Until Element Is Visible    ${SEARCH_COMPETENCE.SearchButton}    timeout=10s
+Clicar em buscar competência
+    Wait Until Element Is Visible    ${SEARCH_COMPETENCE.SearchButton}    timeout=5s
     Click Element    ${SEARCH_COMPETENCE.SearchButton}
 
-Exibir Detalhes de Competência
-    [Documentation]    Testa se os detalhes são exibidos corretamente ao clicar no ícone.
-    Wait Until Element Is Visible    ${SELECT_BUTTON}    timeout=10s
-    Click Element    ${SELECT_BUTTON}
-    Wait Until Element Is Visible    ${SEARCH_COMPETENCE.SearchButton}    timeout=10s
-    Click Element    ${SEARCH_COMPETENCE.SearchButton}
+Depois clicar em detalhes
     Wait Until Element Is Enabled    ${SEARCH_COMPETENCE.DetailIcon}    timeout=10s
     Click Element    ${SEARCH_COMPETENCE.DetailIcon}
 
-Editar Detalhes de Competência
+Clicar para editar os detalhes da competência
     [Documentation]    Testa se é possível editar os detalhes de uma competência.
     Wait Until Element Is Enabled    ${SEARCH_COMPETENCE.EditIcon}    timeout=10s
     Click Element    ${SEARCH_COMPETENCE.EditIcon}
-    Input Text    ${SEARCH_COMPETENCE.NomeInput}    testezíneo
+
+E depois clicar em editar descrição
     Click Element    ${SEARCH_COMPETENCE.EditIcon2}
     Input Text    ${SEARCH_COMPETENCE.DescriptionInput}    testandooooooo de novo
-    Click Element    ${SEARCH_COMPETENCE.SaveButton}
-    Click Element    ${MODAL_BUTTON}
 
 Excluir Competência Lista
     [Documentation]    Testa se a competência é excluída corretamente ao clicar no ícone pela lista.

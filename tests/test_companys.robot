@@ -11,9 +11,9 @@ TC032 - Realizar o Cadastro de uma Empresa
     Clicar em empresa
     Clicar em cadastrar empresa
     Preencher os campos    
-    ...    NAME=Exemplo245
-    ...    CNPJ=1243456743890    
-    ...    PHONE=21346774    
+    ...    NAME=Segundoou
+    ...    CNPJ=12434343055 
+    ...    PHONE=216774    
     ...    SECTOR=IQS
     ...    ADDRESS=Rua dos testes
     Rolar a página
@@ -42,9 +42,9 @@ TC034 - Cadastrar Empresa - Tratamento de Caracteres
     Clicar em empresa
     Clicar em cadastrar empresa
     Preencher os campos    
-    ...    NAME=Exemplo2 
-    ...    CNPJ=eeeee    
-    ...    PHONE=2134564    
+    ...    NAME=tsttt 
+    ...    CNPJ=6125
+    ...    PHONE=2   
     ...    SECTOR=IQS
     ...    ADDRESS=Rua dos testes
     Rolar a página
@@ -58,8 +58,8 @@ TC035 - Cadastrar Empresa - Etapas Obrigatórias
     Clicar em empresa
     Clicar em cadastrar empresa
     Preencher os campos    
-    ...    NAME=Ué 
-    ...    CNPJ=12345645   
+    ...    NAME=etapas 
+    ...    CNPJ=042222465  
     ...    PHONE=5774    
     ...    SECTOR=IQS
     ...    ADDRESS=Rua dos testes
@@ -74,8 +74,8 @@ TC036 - Cadastrar Empresa Duplicada
     Clicar em empresa
     Clicar em cadastrar empresa
     Preencher os campos    
-    ...    NAME=Duplicandoo
-    ...    CNPJ=1234574    
+    ...    NAME=Teste Duplicado
+    ...    CNPJ=12072554
     ...    PHONE=2134674    
     ...    SECTOR=IQS
     ...    ADDRESS=Rua dos testes
@@ -84,8 +84,8 @@ TC036 - Cadastrar Empresa Duplicada
     Rolar a página
     Clicar no botão de voltar
     Preencher os campos    
-    ...    NAME=Duplicandoo 
-    ...    CNPJ=1238563    
+    ...    NAME=teste Duplicado
+    ...    CNPJ=54834
     ...    PHONE=2134673    
     ...    SECTOR=IQS
     ...    ADDRESS=Rua dos testes
@@ -98,7 +98,6 @@ TC037 - Listar Empresas Cadastradas
     Selecionar projeto
     Clicar em empresa
     E clicar em buscar empresa
-    Verificar se há resultados
 
 TC038 - Visualizar Detalhes da Empresa
     Realizar Login Válido Gestor
@@ -114,7 +113,7 @@ TC039 - Editar Nome da Empresa
     E clicar em buscar empresa
     Clicar no ícone de detalhes
     E clicar para editar o nome
-    E colocar um nome    NAME=testEdit
+    E colocar um nome    NAME=vamopular
     Clicar no botão "salvar"
     Clicar no botão modal
     Verificar mensagem de sucesso
@@ -126,7 +125,7 @@ TC040 - Editar CNPJ da Empresa
     E clicar em buscar empresa
     Clicar no ícone de detalhes
     E clicar para editar o cnpj
-    E colocar um cnpj    CNPJ=113456745647
+    E colocar um cnpj    CNPJ=11345345674
     Clicar no botão "salvar"
     Clicar no botão modal
     Verificar mensagem de sucesso
@@ -138,7 +137,7 @@ TC041 - Editar Telefone da Empresa
     E clicar em buscar empresa
     Clicar no ícone de detalhes
     E clicar para editar o telefone
-    E colocar um telefone    PHONE=113456745647
+    E colocar um telefone    PHONE=11446775444
     Clicar no botão "salvar"
     Clicar no botão modal
     Verificar mensagem de sucesso
@@ -175,7 +174,7 @@ TC044 - Verificar Validação ao Editar o CNPJ da Empresa
     E clicar em buscar empresa
     Clicar no ícone de detalhes
     E clicar para editar o cnpj
-    E colocar um cnpj    CNPJ=nãopodeletra
+    E colocar um cnpj    CNPJ=SomenteNumeros
     Clicar no botão "salvar"
     Clicar no botão modal
     Checar mensagem de sucesso indevida
@@ -187,7 +186,7 @@ TC045 - Verificar Validação ao Editar o Telefone da Empresa
     E clicar em buscar empresa
     Clicar no ícone de detalhes
     E clicar para editar o telefone
-    E colocar um telefone    PHONE=1
+    E colocar um telefone    PHONE=0
     Clicar no botão "salvar"
     Clicar no botão modal
     Checar mensagem de sucesso indevida

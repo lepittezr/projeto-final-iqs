@@ -10,7 +10,7 @@ TC022 - Cadastrar Serviço
     Selecionar projeto
     Clicar em serviço
     Clicar em cadastrar serviço
-    Preencher campos nome "Test again" e descrição "apenas testando"
+    Preencher os campos com    NOME=Relatorio    DESCRICAO=Description
     Clicar no botão confirmar
     Clicar no botão modal
     Checar mensagem de sucesso
@@ -20,7 +20,6 @@ TC023 - Cadastrar Serviço - Campos Obrigatórios
     Selecionar projeto
     Clicar em serviço
     Clicar em cadastrar serviço
-    Preencher campos nome "Other test" e descrição ""
     Clicar no botão confirmar
     Verificar aviso de campo obrigatório
 
@@ -30,7 +29,7 @@ TC024 - Cadastrar Serviço - Etapas Obrigatórias
     Selecionar projeto
     Clicar em serviço
     Clicar em cadastrar serviço
-    Preencher campos nome "updateeee" e descrição "eeeee"
+    Preencher os campos com    NOME=EtapasTeste    DESCRICAO=Description
     Clicar no botão confirmar
     Clicar no botão modal
     Checar mensagem de sucesso indevida
@@ -54,9 +53,9 @@ TC027 - Editar Serviço
     Clicar em buscar serviço    
     Clicar no ícone de detalhes
     Clicar no ícone de edição
-    Editar nome    NOME=oieee
+    Editar nome    NOME=TesteEdit
     Clicar para editar a descrição
-    Editar descrição    DESCRICAO=sabadouuu
+    Editar descrição    DESCRICAO=Domingou
     Rolar a tela
     Clicar no botão "salvar"
     Clicar no botão modal

@@ -20,7 +20,8 @@ Clicar em serviço
 Clicar em cadastrar serviço
     Click Element    ${CAD_SERVICE}
 
-Preencher campos nome "${NOME}" e descrição "${DESCRICAO}"
+Preencher os campos com
+    [Arguments]    ${NOME}=    ${DESCRICAO}=
     Input Text    ${FORM_INPUT}    ${NOME}
     Input Text    ${FORM_INPUT2}    ${DESCRICAO}
 
@@ -57,7 +58,6 @@ Clicar no ícone de detalhes
     
 Editar nome
     [Arguments]     ${NOME}=
-
     Input Text    xpath=//*[@id="root"]/div[1]/div/div[2]/div/div/div/div[2]/div[1]/div[3]/div/textarea    ${NOME}
 
 Clicar para editar a descrição

@@ -5,12 +5,12 @@ Test Setup    Open Browser for Navigation
 Test Teardown    Close your Browser
 
 *** Test Cases ***
-TC013 - Colaborador - Listar Todos os Colaboradores
+TC013 - Listar Todos os Colaboradores
     Realizar Login Válido Gestor
     Selecionar projeto
     Exibir Colaboradores
 
-TC014 - Colaborador - Exibir Detalhes
+TC014 - Exibir Detalhes do Colaborador
     Realizar Login Válido Gestor
     Selecionar projeto
     Exibir Colaboradores
@@ -34,7 +34,7 @@ TC016 - Visualizar Competências do Colaborador
     Exibir Detalhes de Colaborador
     Clicar na opção Visualizar Competências do colaborador
 
-TC017 - Visualizar Competências Disponíveis para Adicionar ao Colaborador
+TC017 - Visualizar Competências Disponíveis para Adicionar
     Realizar Login Válido Gestor
     Selecionar projeto
     Exibir Colaboradores
